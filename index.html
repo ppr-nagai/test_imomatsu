@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="ja">
+
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<!--[if lt IE 9]>
+<script src="http://denno-sekai.com/wp-content/themes/twentyfourteen/js/html5.js"></script>
+<![endif]-->
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="format-detection" content="telephone=no">
+<title>京都の居酒屋さん「いも松　木屋町店」</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<meta name="robots" content="all" />
+<meta property="og:title" content="京都の居酒屋さん「いも松　木屋町店」">
+<meta property="og:type" content="website">
+<meta property="og:description" content="ここも入力する">
+<meta property="og:url" content="https://">
+<meta property="og:site_name" content="【公式】京都の居酒屋さん「いも松　木屋町店」">
+<link rel="altarnate" type="application/rss+xml" title="sitemap" href="sitemap.xml" />
+<link href="https://fonts.googleapis.com/css?family=Archivo+Black&display=swap" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="css/normalize.min.css">
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<script src="js/vendor/jquery-3.3.1.min.js"></script><!-- jQueryの本体(ライブラリ) -->
+<script src="js/smoothScrolling.js"></script>
+<script>
+$(function() {
+  // 置換の対象とするclass属性。
+  var $elem = $('.js-image-switch');
+  // 置換の対象とするsrc属性の末尾の文字列。
+  var sp = '_sp.';
+  var pc = '_pc.';
+  // 画像を切り替えるウィンドウサイズ。
+  var replaceWidth = 768;
+
+  function imageSwitch() {
+    // ウィンドウサイズを取得する。
+    var windowWidth = parseInt(window.innerWidth);
+
+    // ページ内にあるすべての`.js-image-switch`に適応される。
+    $elem.each(function() {
+      var $this = $(this);
+      // ウィンドウサイズが768px以上であれば_spを_pcに置換する。
+      if(windowWidth >= replaceWidth) {
+        $this.attr('src', $this.attr('src').replace(sp, pc));
+
+      // ウィンドウサイズが768px未満であれば_pcを_spに置換する。
+      } else {
+        $this.attr('src', $this.attr('src').replace(pc, sp));
+      }
+    });
+  }
+  imageSwitch();
+
+  // 動的なリサイズは操作後0.2秒経ってから処理を実行する。
+  var resizeTimer;
+  $(window).on('resize', function() {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(function() {
+      imageSwitch();
+    }, 200);
+  });
+});
+</script>
+</head>
+
+<body>
+<div id="wrap">
+
+
+<header id="header">
+    <div class="header_inner">
+        <h1>京都の居酒屋さん「いも松 木屋町店」</h1>
+        <div class="header_logo">
+            <img src="./images/img_headerNav-1-min.png" alt="京都の居酒屋さん「いも松　木屋町店」" />
+        </div>
+        <div class="reservation_btn">
+            <img class="js-image-switch" src="./images/img_headerNav-2-min_pc.png".png alt="京都の居酒屋さん「いも松　木屋町店」" />
+        </div>
+        <div class="tell_btn">
+            <img class="js-image-switch" src="./images/img_headerNav-3-min_pc.png" alt="京都の居酒屋さん「いも松　木屋町店」" />
+        </div>
+    </div>
+    
+    <div class="slider">
+        
+    </div>
+</header>
+
+<section id="box" class="section01">
+    <div id="stage">
+        
+    </div>
+</section>
+
+
+<footer id="footer">
+    <div id="footer_logo">
+        
+    </div>
+    <div class="footer_inner flexBox flex-between">
+        <div class="boxLeft">
+            
+        </div>
+<!--
+        <div class="boxCenter mapArea">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3280.2379906338797!2d135.5311174155452!3d34.69917678043502!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6000e1ea2be69ffd%3A0x22dd9e1429c9b13a!2zRkVTQ1JV772e44OV44Kn44K544Kv44Or772e772c5Lqs5qmLIOODkOODvCDjgrnjgr_jg7Pjg4fjgqPjg7PjgrDjg5Djg7wg44Kq44K344Oj44OsIOWHuuS8muOBhO-9nDHkurrpo7Ljgb8g5aWz5a2Q5Lya44Gr44GK44K544K544Oh!5e0!3m2!1sja!2sjp!4v1559621468240!5m2!1sja!2sjp" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+        </div>
+-->
+        <div class="boxRight">
+          <p>〒534-0024<br />大阪府大阪市都島区東野田町5丁目1-21</p>
+          <dl class="clearfix">
+            <dt>営業時間 ≫</dt><dd>月～木・日&emsp;18:00～翌1:00</dd><dd>金・土・祝前日&emsp;18:00～翌2:00</dd>
+          </dl>
+        </div>
+        <div id="copyright">Copyright (c) FESCRU All Rights Reserved.</div>
+    </div>
+</footer>
+
+  </div>
+
+<!-- *****************************************************************************************************  -->
+<!-- スクリプトここ -->
+</body>
