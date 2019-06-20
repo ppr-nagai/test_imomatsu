@@ -22,105 +22,308 @@
 <link rel="altarnate" type="application/rss+xml" title="sitemap" href="sitemap.xml" />
 <link href="https://fonts.googleapis.com/css?family=Archivo+Black&display=swap" rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="css/normalize.min.css">
+<link rel="stylesheet" type="text/css" href="css/slider-pro.min.css">
 <link rel="stylesheet" type="text/css" href="css/style.css">
-<script src="js/vendor/jquery-3.3.1.min.js"></script><!-- jQueryの本体(ライブラリ) -->
+
+<script src="js/jquery-3.3.1.min.js"></script><!-- jQueryの本体(ライブラリ) -->
 <script src="js/smoothScrolling.js"></script>
-<script>
-$(function() {
-  // 置換の対象とするclass属性。
-  var $elem = $('.js-image-switch');
-  // 置換の対象とするsrc属性の末尾の文字列。
-  var sp = '_sp.';
-  var pc = '_pc.';
-  // 画像を切り替えるウィンドウサイズ。
-  var replaceWidth = 768;
+    <script src="js/image-switch.js"></script>
 
-  function imageSwitch() {
-    // ウィンドウサイズを取得する。
-    var windowWidth = parseInt(window.innerWidth);
-
-    // ページ内にあるすべての`.js-image-switch`に適応される。
-    $elem.each(function() {
-      var $this = $(this);
-      // ウィンドウサイズが768px以上であれば_spを_pcに置換する。
-      if(windowWidth >= replaceWidth) {
-        $this.attr('src', $this.attr('src').replace(sp, pc));
-
-      // ウィンドウサイズが768px未満であれば_pcを_spに置換する。
-      } else {
-        $this.attr('src', $this.attr('src').replace(pc, sp));
-      }
-    });
-  }
-  imageSwitch();
-
-  // 動的なリサイズは操作後0.2秒経ってから処理を実行する。
-  var resizeTimer;
-  $(window).on('resize', function() {
-    clearTimeout(resizeTimer);
-    resizeTimer = setTimeout(function() {
-      imageSwitch();
-    }, 200);
-  });
-});
-</script>
 </head>
 
 <body>
 <div id="wrap">
 
 
-<header id="header">
-    <div class="header_inner">
-        <h1>京都の居酒屋さん「いも松 木屋町店」</h1>
-        <div class="header_logo">
-            <img src="./images/img_headerNav-1-min.png" alt="京都の居酒屋さん「いも松　木屋町店」" />
+    <header id="header">
+        <div class="header_inner">
+            <h1>京都の居酒屋さん「いも松 木屋町店」</h1>
+            <div class="header_logo">
+                <img src="./images/img_headerNav-1-min.png" alt="いも松　木屋町店" />
+            </div>
+            <div class="reservation_btn">
+                <img class="js-image-switch" src="./images/img_headerNav-2-min_pc.png" alt="WEB予約" />
+            </div>
+            <div class="tell_btn">
+                <img class="js-image-switch" src="./images/img_headerNav-3-min_pc.png" alt="075-213-2590" />
+            </div>
         </div>
-        <div class="reservation_btn">
-            <img class="js-image-switch" src="./images/img_headerNav-2-min_pc.png".png alt="京都の居酒屋さん「いも松　木屋町店」" />
+
+        <div class="slider-pro" id="slider1">
+            <div class="sp-slides">
+                <!-- Slide 1 -->
+                <div class="sp-slide">
+                    <img class="sp-image js-image-switch" src="./images/img_header-1-min_pc.jpg" alt="大人気！いも松木屋町店の食べ飲み放題コース　プレミアム飲み放題付3,700円(税込)" />
+                </div>
+                <!-- Slide 2 -->
+                <div class="sp-slide">
+                    <img class="sp-image js-image-switch" src="./images/img_header-2-min_pc.jpg" alt="質は高い、なのに安い。" />
+                </div>
+                <!-- Slide 3 -->
+                <div class="sp-slide">
+                    <img class="sp-image js-image-switch" src="./images/img_header-3-min_pc.jpg" alt="最大40名様OK！完全個室で今宵はゆったり宴を。～河原町から徒歩5分～" />
+                </div>
+            </div>
         </div>
-        <div class="tell_btn">
-            <img class="js-image-switch" src="./images/img_headerNav-3-min_pc.png" alt="京都の居酒屋さん「いも松　木屋町店」" />
+    </header>
+
+    <section id="about" class="section01">
+        <div class="section01_inner">
+            <div class="right_box">
+                <div class="right_box_inner">
+                <div class="img01">
+                    <img src="./images/img_sec01-2-min.png" alt="史上最高級の満足、これがいも松木屋町店。" />
+                </div>
+                <div class="txt01">
+                    <p>河原町駅から徒歩3分。<br />京風情の香る、<br />木屋町の並木道の一軒『いも松』は<br />「味よし」「値段よし」と、<br />創業以来、愛され続けた街の居酒屋。<br />新鮮な魚介、お造り、お寿司等、<br />100種以上の品揃えを誇る<br />自慢の「食べ飲み放題」で、<br />今宵も宴会をお楽しみください。
+                    </p>
+                </div>
+                    </div>
+            </div>
+
+            <div class="left_box">
+                <img class="sp-image js-image-switch" src="./images/sp_img_sec01-bg2-min.jpg" alt="" />
+            </div>
         </div>
-    </div>
+    </section>
+
+    <section id="enkai" class="section02">
+        <div class="section02_inner">
+            <div class="left_box">
+                <div class="img01">
+                    <img class="sp-image js-image-switch" src="./images/img_sec02-6-min.png"/>
+                </div>
+                
+                <div class="txt01">
+                    <p>どこか懐かしく心温まる雰囲気の空間で今宵は宴会を。11名～最大40名様までご利用いただける完全個室のお席もご用意。会社の飲み会や同窓会など、各種宴会・人数に併せたお席を見繕ってご案内いたします。
+                    </p>
+                </div>
+
+                <div class="img02">
+                    <img class="sp-image js-image-switch" src="./images/img_sec02-7-min.png"/>
+                </div>
+            </div>
+
+            <div class="right_box">
+                <div class="img03">
+                    <img class="sp-image js-image-switch" src="./images/img_sec02-2-min.png"/>
+                </div>
+                <div class="img04">
+                    <img class="sp-image js-image-switch" src="./images/img_sec02-3-min.png"/>
+                </div>
+                <div class="img05">
+                    <img class="sp-image js-image-switch" src="./images/img_sec02-4-min.png"/>
+                </div>
+                <div class="img06">
+                    <img class="sp-image js-image-switch" src="./images/img_sec02-5-min.png"/>
+                </div>
+            </div>
+        </div>
+    </section>
     
-    <div class="slider">
-        
-    </div>
-</header>
-
-<section id="box" class="section01">
-    <div id="stage">
-        
-    </div>
-</section>
-
-
-<footer id="footer">
-    <div id="footer_logo">
-        
-    </div>
-    <div class="footer_inner flexBox flex-between">
-        <div class="boxLeft">
+    <section id="drink" class="section03">
+        <div class="section03_inner">
+            <div class="img01">
+                <img src="./images/img_sec03-1-min.jpg"/>
+            </div>
+        </div>
+    </section>
+    
+    <section id="enkai_plan" class="section04">
+        <div class="section04_inner">
+            <div class="box_top">
+                <div class="img01">
+                    <img src="./images/img_sec04-1-min.png"/>
+                </div>
+                <div class="img02">
+                    <img src="./images/img_sec04-2-min.png"/>
+                </div>
+                <div class="img03">
+                    <img src="./images/img_sec04-3-min.png"/>
+                </div>
+                <div class="img04">
+                    <img src="./images/img_sec04-4-min.png"/>
+                </div>
+                
+                <div class="img14">
+                    <img class="js-image-switch" src="./images/img_sec04-14-min_pc.png"/>
+                </div>
+                
+            </div>
             
+            <div class="box_left01">
+                <div class="img05">
+                    <img class="js-image-switch" src="./images/img_sec04-5-min.png"/>
+                </div>
+            </div>
+            
+            <div class="box_right01">
+                <div class="plan01">
+                    <div class="img06">
+                        <img src="./images/img_sec04-6-min.png"/>
+                    </div>
+                    <div class="img07">
+                        <img class="js-image-switch" src="./images/img_sec04-7-min_pc.png"/>
+                    </div>
+                </div>
+                <div class="plan02">
+                    <div class="img08">
+                        <img src="./images/img_sec04-8-min.png"/>
+                    </div>
+                    <div class="img09">
+                        <img class="js-image-switch" src="./images/img_sec04-9-min_pc.png"/>
+                    </div>
+                </div>
+                <div class="txt01">
+                    <p>
+                        学生さん、サラリーマン必見！いも松木屋町店おすすめの食べ飲み放題は3,200円から。<span class="sp_none"><br /></span>100種以上のお料理に月替わりの限定おすすめメニュー、ドリンク2時間半飲み放題<span class="sp_none"><br /></span>(L.O.100分)がついたお得な食べ飲み放題です。+500円で生ビールと全国の地酒がついたプ<span class="sp_none"><br /></span>レミアム食べ飲み放題に変更可。
+                    </p>
+                </div>
+            </div>
+            
+            <div class="box_right02">
+                <div class="img012">
+                    <img class="sp-image js-image-switch" src="./images/img_sec04-12-min.png"/>
+                </div>
+            </div>
+            
+            <div class="box_left02">
+                <div class="plan03">
+                    <div class="img10">
+                        <img src="./images/img_sec04-10-min.png"/>
+                    </div>
+                    <div class="img11">
+                        <img class="js-image-switch" src="./images/img_sec04-11-min_pc.png"/>
+                    </div>
+                </div>
+                <div class="txt02">
+                    <p>
+                        歓送迎会に悩む幹事の方必見！ワンランク上の限定コースは、食べ飲み放題プランにはない豪華一品、旬の新鮮なお造りや季節の鍋をおなかいっぱいにお召し上がりいただけます。飲み放題は3時間とゆったり過ごせるのもポイント。
+                    </p>
+                </div>
+            </div>
         </div>
-<!--
-        <div class="boxCenter mapArea">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3280.2379906338797!2d135.5311174155452!3d34.69917678043502!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6000e1ea2be69ffd%3A0x22dd9e1429c9b13a!2zRkVTQ1JV772e44OV44Kn44K544Kv44Or772e772c5Lqs5qmLIOODkOODvCDjgrnjgr_jg7Pjg4fjgqPjg7PjgrDjg5Djg7wg44Kq44K344Oj44OsIOWHuuS8muOBhO-9nDHkurrpo7Ljgb8g5aWz5a2Q5Lya44Gr44GK44K544K544Oh!5e0!3m2!1sja!2sjp!4v1559621468240!5m2!1sja!2sjp" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+    </section>
+    
+    <section id="nomihoudai" class="section05">
+        <div class="section05_inner">
+            <div class="img01">
+                <img src="./images/img_sec05-1-min.png"/>
+            </div>
+            <div class="txt01">
+                <p>
+                    毎日22：00開催！（日曜以外）のエンドレス飲み放題<span class="pc_none"><br /></span>プランも<span class="sp_none"><br /></span>ご用意しております。閉店までどうぞ、ごゆる<span class="pc_none"><br /></span>りと！無制限なので時間を気に<span class="sp_none"><br /></span>せずお楽しみ頂けます。<span class="pc_none"><br /></span>二次会にぜひご利用ください。
+                </p>
+            </div>
+            <div class="img02">
+                <img src="./images/img_sec05-2-min.png"/>
+            </div>
         </div>
--->
-        <div class="boxRight">
-          <p>〒534-0024<br />大阪府大阪市都島区東野田町5丁目1-21</p>
-          <dl class="clearfix">
-            <dt>営業時間 ≫</dt><dd>月～木・日&emsp;18:00～翌1:00</dd><dd>金・土・祝前日&emsp;18:00～翌2:00</dd>
-          </dl>
+    </section>
+    
+    <section id="shop_layout" class="section06">
+        <div class="section06_inner">
+            <div class="img01">
+                <img src="./images/img_sec06-1-min.png"/>
+            </div>
+            <div class="img02">
+                <img src="./images/img_sec06-2-min.png"/>
+            </div>
+            <div class="flex_inner01">
+                <div class="img03">
+                    <img src="./images/img_sec06-3-min.jpg"/>
+                </div>
+                <div class="img04">
+                    <img src="./images/img_sec06-4-min.jpg"/>
+                </div>
+            </div>
+            
+            <div class="img05">
+                <img src="./images/img_sec06-5-min.png"/>
+            </div>
         </div>
-        <div id="copyright">Copyright (c) FESCRU All Rights Reserved.</div>
-    </div>
-</footer>
+    </section>
+    
+    <section id="line" class="section07">
+        <div class="section07_inner">
+            <div class="img01">
+                <img src="./images/img_sec07-1-min.png"/>
+            </div>
+            <div class="img02">
+                <img src="./images/img_sec07-2-min.png"/>
+            </div>
+        </div>
+    </section>
 
-  </div>
+
+    <footer id="footer">
+        <div class="footer_inner">
+            <div class="img01">
+                <img src="./images/img_footer-1-min.png"/>
+            </div>
+            <div class="txt01">
+                <p>
+                    居酒屋　いも松　木屋町店
+                </p>
+            </div>
+            <div class="txt02">
+                <p>
+                    いざかや　いもまつ　きやまちてん
+                </p>
+            </div>
+            <div class="txt03">
+                <p>
+                    <span class="txt_size01">京都府京都市中京区木屋町三条下ル 第六観光ビル B1</span><br />月～土　18:00～翌5:00（L.O.4:00、D.L.O.4:30）<br />日・祝　18:00～翌1:00（L.O.24:00、D.L.O.24:30）<br />不定休あり<br />075-213-2590
+                </p>
+            </div>
+            <div class="flex_inner01">
+                <div class="img03">
+                    <img src="./images/img_footer-3-min.png"/>
+                </div>
+                <div class="img04">
+                    <img src="./images/img_footer-4-min.png"/>
+                </div>
+            </div>
+
+        <!--
+                <div class="boxCenter mapArea">
+                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3280.2379906338797!2d135.5311174155452!3d34.69917678043502!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6000e1ea2be69ffd%3A0x22dd9e1429c9b13a!2zRkVTQ1JV772e44OV44Kn44K544Kv44Or772e772c5Lqs5qmLIOODkOODvCDjgrnjgr_jg7Pjg4fjgqPjg7PjgrDjg5Djg7wg44Kq44K344Oj44OsIOWHuuS8muOBhO-9nDHkurrpo7Ljgb8g5aWz5a2Q5Lya44Gr44GK44K544K544Oh!5e0!3m2!1sja!2sjp!4v1559621468240!5m2!1sja!2sjp" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+                </div>
+        -->
+
+                <div id="copyright">Copyright (c) FESCRU All Rights Reserved.</div>
+
+        </div>
+    </footer>
+
+</div><!-- wrap -->
+
 
 <!-- *****************************************************************************************************  -->
-<!-- スクリプトここ -->
+
+<script type="text/javascript" src="js/jquery.sliderPro.min.js"></script>
+<!-- スライダーの設定スクリプト -->
+
+<script>
+  $(document).ready(function(){
+        $( '#slider1' ).sliderPro({
+width: "90%",
+autoHeight:true,
+centerImage:true,
+slideDistance:0,
+visibleSize:"100%",
+buttons: false,//ナビゲーションボタン
+			breakpoints: {
+      757: {//表示方法を変えるサイズ
+width: "100%",
+autoHeight:true,
+visibleSize:"100%",
+slideDistance:0,
+arrows:false,
+      }
+    }
+ 
+});
+  });
+</script>
 </body>

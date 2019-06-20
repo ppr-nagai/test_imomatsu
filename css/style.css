@@ -1,13 +1,53 @@
+body{
+
+}
+
+img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.sp_none{
+        display: none;
+    }
+
+@media screen and (min-width: 768px) {
+    .sp_none{
+    display: inline;
+}
+}
+
+.pc_none{
+        display: inline;
+    }
+
+@media screen and (min-width: 768px) {
+    .pc_none{
+    display: none;
+}
+}
 /***************************/
 /* header
 ************************************/
-.header_inner{
-    background:url(../images/sp_img_headerNav-3-min.jpg)0 0 no-repeat;
-    background-repeat: no-repeat;
-  background-size: 100%;
-  background-position: top;
-  position: relative;
+header{
+    width: 100%;
+    height: auto;
+    padding: 20.43% 0 0 0;
+    position: relative;
 }
+
+.header_inner{
+    background: url(../images/sp_img_headerNav-3-min.jpg) 0 0 no-repeat;
+    background-size: 102%;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
 
 /*
 .header_inner::after{
@@ -19,36 +59,853 @@
 
 .header_inner h1{
     color: white;
-    font-size: 11.5px;
+    font-size: 1vw;
     width: 50%;
     margin: 0;
-    padding: 2% 0 0 2%;
+    padding: 1% 0 0 1%;
     font-weight: normal;
+    text-align: left;
+}
+
+.header_logo{
+    width: 25%;
+    margin-left: 3%;
     text-align: center;
 }
 
 .header_logo img{
-    width: 20%;
+    width: 100%;
 }
 
 .reservation_btn{
-    
+    width: 29%;
+    position: fixed;
+    top: 0;
+    right: 29%;
+    z-index: 2;
 }
 
+.reservation_btn img{
+    width: 100%;
+}
 .tell_btn{
-    
+    width: 29%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 2;
+}
+
+.tell_btn img{
+    width: 100%;
 }
 
 /* PC用の設定 */
 @media screen and (min-width: 768px) {
+    header{
+        width: 100%;
+        height: auto;
+        padding: 9.07% 0 0 0;
+        position: relative;
+    }
+
+    .header_inner{
+        background: url(../images/img_headerNav-bg1-min.jpg) 0 0 no-repeat;
+        background-size: 100%;
+    }
+    
     .header_logo{
-        text-align: center;
+        margin:0 auto;
+        padding-top: 1%;
+        width: 14%;
     }
     
     .header_inner h1{
         position: absolute;
     }
+    
+    .reservation_btn{
+        width: 17%;
+        top: 0;
+        right: 24%;
+    }
+
+    .reservation_btn img{
+        width: 100%;
+    }
+    
+    .tell_btn{
+        width: 24%;
+        top: 0;
+        right: 0;
+    }
+
+    .tell_btn img{
+        width: 100%;
+    }
+    
+    .header_inner h1{
+        font-size: 1.5vw;
+    }
+}
+
+.sp-grab {
+    cursor: inherit;
 }
 /***************************/
 /* section01
 ************************************/
+.section01_inner{
+    position: relative;
+}
+
+/*
+.section01 .right_box{
+    background:url(../images/sp_img_sec01-bg1-min.png)0 0 no-repeat;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+    position: relative;
+}
+*/
+
+.section01 .right_box{
+    width: 100%;
+    height: auto;
+    padding: 90.81% 0 0 0;
+    position: relative;
+}
+
+.right_box_inner{
+    background: url(../images/sp_img_sec01-bg1-min.png) 0 0 no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.section01 .img01{
+    width: 20%;
+    position: absolute;
+    right: 9%;
+    bottom: 5%;
+/*
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 2% 0 0 70%;
+*/
+}
+
+
+.section01 .txt01{
+    padding: 18% 0 2% 8%;
+    -ms-writing-mode: tb-rl;
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    -webkit-text-orientation: upright;
+    font-size: 3.6vw;
+}
+
+.section01 .left_box{
+    width: 100%;
+}
+
+.section01 .left_box img{
+    width: 100%;
+}
+
+/* PC用の設定 */
+@media screen and (min-width: 768px) {
+    .section01_inner{
+        display: flex;
+        display: -webkit-flex;
+        -webkit-flex-direction: row-reverse;
+        flex-direction: row-reverse;
+    }
+    
+    .section01 .left_box{
+        width: 0;
+    }
+    
+    .section01 .right_box{
+    padding: 48.77% 0 0 0;
+    }
+
+    .right_box_inner{
+        background: url(../images/img_sec01-bg1-min.jpg) 0 0 no-repeat;
+        background-size: cover;
+    }
+    
+    .section01 .img01{
+        width: 11%;
+        position: absolute;
+        right: 5%;
+    }
+    
+    .section01 .txt01{
+        position: absolute;
+        padding: 0;
+        right: 15%;
+        top: 18%;
+        font-size: 2vw;
+    }
+}
+
+/***************************/
+/* section02
+************************************/
+.section02 .left_box{
+    background:url(../images/sp_img_sec02-1-min.jpg)0 0 no-repeat;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+    position: relative;
+    padding: 8% 0;
+}
+
+.section02 .img01{
+    width: 70%;
+    margin: 0 auto 7%;
+}
+
+.section02 .txt01{
+    width: 70%;
+    margin: 0 auto 7%;
+    font-size: 3.5vw;
+    text-align:justify;
+    text-justify: inter-ideograph;
+}
+
+.section02 .img02{
+    width: 55%;
+    margin: 0 auto;
+}
+
+.section02 .right_box{
+    background: url(../images/sp_img_sec02-2-min.jpg) 0 0 no-repeat;
+    background-size: contain;
+    position: relative;
+}
+
+.section02 .right_box::after{
+  content: '';
+  display: block;
+  padding-top: 84.85%;
+}
+
+.section02 .img03{
+    position: absolute;
+    width: 88%;
+    top: 55%;
+    left: 50%;
+    margin-right: -50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.section02 .img04{
+    position: absolute;
+    width: 41%;
+    top: 20%;
+    left: -1%;
+}
+
+.section02 .img05{
+    position: absolute;
+    width: 37%;
+    top: 9%;
+    right: 8%;
+}
+
+.section02 .img06{
+    position: absolute;
+    width: 35%;
+    bottom: 8%;
+    right: 10%;
+}
+
+/* PC用の設定 */
+@media screen and (min-width: 768px) {
+    .section02_inner{
+        display: flex;
+        display: -webkit-flex;
+    }
+    
+    .section02 .left_box{
+        width: 50%;
+    }
+    
+    .section02 .right_box{
+        width: 50%;
+        overflow: hidden;
+        background-size: cover;
+    }
+    
+    .section02 .txt01{
+        width: 73%;
+        margin: 0 auto 7%;
+        font-size: 1.8vw;
+    }
+    
+    .section02 .left_box{
+        padding: 6% 0
+    }
+    
+    .section02 .img03{
+        top: 50%;
+    }
+    
+    .section02 .img04{
+        width: 35%;
+        top: 18%;
+        left: 2%;
+    }
+    
+    .section02 .img06{
+        width: 32%;
+        bottom: 20%;
+        right: 4%;
+    }
+}
+
+
+/***************************/
+/* section04
+************************************/
+.section04{
+  position: relative;
+  margin: -10% auto 0;
+  padding: 10% 0 0;
+}
+
+.section04_inner{
+    background-image: url(../images/sp_img_sec04-bg3-min.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: top;
+    position: relative;
+}
+
+.section04 .box_top{
+    position: relative;
+}
+
+.section04 .img01{
+    width: 55%;
+    position: absolute;
+    top: -0.3%;
+    left: -0.5%;
+}
+
+.section04 .img02{
+    width: 10%;
+    position: relative;
+    left: 80.3%;
+}
+
+.section04 .img03{
+    width: 24%;
+    position: absolute;
+    left: 47%;
+    top: 22%;
+    z-index: 1;
+}
+
+.section04 .img14{
+    width: 40%;
+    position: absolute;
+    top: 78%;
+    left: 10%;
+}
+
+.section04 .img04{
+    width: 40%;
+    position: absolute;
+    right: 0;
+    top: 92%;
+}
+
+.section04 .img05{
+    width: 100%;
+    position: relative;
+    padding: 50% 0 0;
+}
+
+.section04 .img06{
+    width: 80%;
+    margin: 5% auto 2%;
+}
+
+.section04 .img07{
+    width: 83%;
+    margin: 0 auto 3%;
+}
+
+.section04 .img08{
+    width: 65%;
+    margin: 0 auto 2%;
+}
+
+.section04 .img09{
+    width: 88%;
+margin-left: 8%
+}
+
+.section04 .txt01{
+    width: 82%;
+    margin: 0 auto;
+    position: relative;
+    font-size: 3.3vw;
+    text-align: justify;
+    text-justify: inter-ideograph;
+}
+
+.section04 .img10{
+    width: 50%;
+    margin: 5% 0 4% 8%;
+}
+
+.section04 .img11{
+    width: 88%;
+    margin: 0 0 0 7%;
+}
+
+.section04 .txt02{
+    width: 82%;
+    margin: 0 auto;
+    position: relative;
+    font-size: 3.2vw;
+    text-align: justify;
+    text-justify: inter-ideograph;
+    padding-bottom: 1%;
+}
+
+/* PC用の設定 */
+@media screen and (min-width: 768px) {
+    .section04{
+        
+    }
+    .section04_inner{
+        background-image: url(../images/img_sec04-bg4-min.jpg);
+        background-repeat: no-repeat;
+        background-size: 100%;
+        background-position: top;
+        position: relative;
+        padding-bottom: 5%;
+    }
+    
+    .section04 .img01{
+        width: 55%;
+        position: absolute;
+        top: 3%;
+        left: -2%;
+    }
+    
+    .section04 .img02{
+        width: 6%;
+        position: relative;
+        left: 87.3%;
+    }
+    
+    .section04 .img03{
+        width: 13%;
+        position: absolute;
+        left: 70%;
+        top: 21%;
+        z-index: 1;
+    }
+    
+    .section04 .img14{
+        width: 17.5%;
+        position: absolute;
+        top: 21%;
+        left: 51%;
+    }
+    
+    .section04 .img04{
+        width: 26%;
+        position: absolute;
+        right: 0;
+        top: 91%;
+    }
+    
+    .section04 .img05{
+        width: 50%;
+        position: relative;
+        padding: 50% 0 0;
+    }
+    
+    .section04 .img05{
+        width: 38%;
+        position: absolute;
+        padding: 35% 0 0;
+    }
+
+    .section04 .img06{
+        width: 40%;
+        margin: 5% 0 1.5% 35%;
+        position: relative;
+        padding: 24% 0 0;
+    }
+    
+    .section04 .img07{
+        width: 62%;
+        margin: 0 0 2% 32.5%;
+        z-index: 1;
+        position: relative;
+    }
+    
+    .section04 .img08{
+        width: 32%;
+        margin: 4% 0 1.5% 35%;
+        position: relative;
+    }
+
+    .section04 .img09{
+        width: 62%;
+        margin: 0 0 1% 32.5%;
+        z-index: 1;
+        position: relative;
+    }
+    
+    .section04 .txt01{
+        width: 66%;
+        margin: 0 0 3% 33.4%;
+        position: relative;
+        font-size: 1.4vw;
+        text-align: left;
+        text-justify: none;
+        line-height: 200%;
+    }
+    
+    .section04 .img012{
+        width: 38%;
+        position: absolute;
+        right: 0;
+    }
+    
+    .section04 .img10{
+        width: 21%;
+        position: relative;
+        margin:  6% 0 1% 8%;
+    }
+
+    .section04 .img11{
+        width: 59%;
+        margin: 0 0 0 7%;
+        position: relative;
+        z-index: 1;
+    }
+
+    .section04 .txt02{
+        width: 57%;
+        margin: 0 0 0 8%;
+        position: relative;
+        font-size: 1.5vw;
+        text-align: left;
+        text-justify: none;
+    }
+}
+/***************************/
+/* section05
+************************************/
+.section05{
+    width: 100%;
+    height: auto;
+    padding: 107.36% 0 0 0;
+    position: relative;
+}
+
+.section05_inner{
+    background: url(../images/sp_img_sec05-bg1-min.jpg) 0 0 no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.section05 .img01{
+    width: 90%;
+    margin: 5% auto 0;
+}
+
+.section05 .txt01{
+    color: #fff;
+    width: 85%;
+    margin: 0 auto 5%;
+    text-shadow:2px 2px 11px #000000,6px 6px 11px #000000,3px 3px 10px #000000;
+    font-size: 3.25vw;
+    line-height: 170%
+}
+
+.section05 .img02{
+    width: 92%;
+    margin-left: 2%;
+     padding-bottom: 10%;
+}
+
+@media screen and (min-width: 768px) {
+    .section05{
+        padding: 52% 0 0 0;
+    }
+
+    .section05_inner{
+        background: url(../images/img_sec05-bg1-min.jpg) 0 0 no-repeat;
+        background-size: cover;
+    }
+    
+    .section05 .img01{
+        width: 50%;
+        margin: 5% auto 0;
+    }
+    
+    .section05 .txt01{
+        color: #fff;
+        width: 55%;
+        margin: 0 auto;
+        font-size: 1.4vw;
+        line-height: 200%;
+        text-align: center;
+    }
+    
+    .section05 .txt01 p{
+        margin: 3% 0 0;
+    }
+    
+    .section05 .img02{
+        width: 51%;
+        margin-left: 24%
+    }
+}
+
+/***************************/
+/* section06
+************************************/
+.section06{
+    width: 100%;
+    height: auto;
+    padding: 229.46% 0 0 0;
+    position: relative;
+}
+
+.section06_inner{
+    background: url(../images/sp_img_sec06-bg1-min.jpg) 0 0 no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.section06 .img01{
+    width: 59%;
+    margin: 2% auto 2%;
+}
+
+.section06 .img02{
+    width: 74%;
+    margin: 2% auto 2%;
+}
+
+.section06 .flex_inner01{
+    display: flex;
+    display: -webkit-flex;
+}
+
+.section06 .img03{
+    width: 46%;
+    margin: 3% 0.8% 2% 3%;
+}
+
+.section06 .img04{
+    width: 46%;
+    margin: 3% 2% 2% 0.8%;
+}
+
+.section06 .img05{
+    width: 35%;
+    margin: 7% auto 0;
+}
+
+@media screen and (min-width: 768px) {
+    .section06{
+        width: 100%;
+        height: auto;
+        padding: 82.76% 0 0 0;
+        position: relative;
+    }
+
+    .section06_inner{
+        background: url(../images/img_sec06-bg1-min.jpg) 0 0 no-repeat;
+        background-size: cover;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    
+    .section06 .img01{
+        width: 28%;
+        top: 2%;
+        position: absolute;
+        right: 20%;
+    }
+    
+    .section06 .img02{
+        width: 35%;
+        margin: 4% 0 0 14%;
+    }
+    
+    .section06 .flex_inner01{
+        display: inline;
+        display: -webkit-inline;
+    }
+
+    .section06 .img03{
+        position: absolute;
+        width: 30%;
+        margin: 0;
+        top: 24.5%;
+        right: 19%;
+    }
+
+    .section06 .img04{
+        position: absolute;
+        width: 30%;
+        margin: 0;
+        top: 54.5%;
+        right: 19%;
+    }
+
+    .section06 .img05{
+        width: 20%;
+        margin: 4.5% auto 0;
+    }
+}
+/***************************/
+/* section07
+************************************/
+.section07{
+    width: 100%;
+    height: auto;
+    padding: 49.14% 0 0 0;
+    position: relative;
+}
+
+.section07_inner{
+    background: url(../images/img_sec07-bg1-min.png) 0 0 no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.section07 .img01{
+    width: 75%;
+    margin: 5% auto 0;
+}
+
+.section07 .img02{
+    width: 65%;
+    margin: 5% auto 0;
+}
+
+@media screen and (min-width: 768px) {
+    .section07{
+    padding: 28.96% 0 0 0;
+    }
+    
+    .section07 .img01{
+        width: 45%;
+        margin: 3% auto 0;
+    }
+
+    .section07 .img02{
+        width: 35%;
+        margin: 3% auto 0;
+    }
+}
+
+/***************************/
+/* footer
+************************************/
+footer{
+    width: 100%;
+    height: auto;
+    padding: 205.07% 0 0 0;
+    position: relative;
+}
+
+.footer_inner{
+    background: url(../images/sp_img_footer-bg1-min.jpg) 0 0 no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+footer .img01{
+    width: 30%;
+    margin: 5% auto 7%;
+}
+
+footer .txt01{
+    color: #fff;
+    width: 85%;
+    margin: 0 auto 0;
+    text-shadow:1px 1px 20px #000000,1px 1px 20px #000000,1px 1px 0px #000000;
+    font-size: 4.6vw;
+    font-weight: bold;
+}
+
+footer .txt01 p, footer .txt02 p{
+    margin: 0;
+}
+
+footer .txt02{
+    color: #fff;
+    width: 85%;
+    margin: 0 auto 5%;
+    text-shadow:1px 1px 1px #000000,1px 1px 1px #000000,1px 1px 1px #000000;
+    font-size: 2.4vw;
+    font-weight: bold;
+}
+
+footer .txt03{
+    color: #fff;
+    width: 90%;
+    margin: 0 0 5% 10%;
+    text-shadow:1px 1px 10px #000000,1px 1px 10px #000000,1px 1px 10px #000000;
+    font-size: 3.35vw;
+    line-height: 170%
+}
+
+.txt_size01{
+    font-size: 3vw;
+}
+
+footer .flex_inner01{
+    display: flex;
+    display: -webkit-flex;
+    justify-content: center;
+}
+
+footer .img03{
+    width: 38%;
+    margin-right: 6%
+}
+
+footer .img04{
+    width: 38%;
+}
