@@ -1,5 +1,5 @@
 body{
-
+    font-size: 16px;
 }
 
 img {
@@ -9,6 +9,25 @@ img {
     display: block;
 }
 
+ul{
+    list-style:none;
+}
+
+p{
+    margin: 0;
+}
+h2{
+    margin: 0;
+}
+h3{
+    margin: 0;
+}
+h4{
+    margin: 0;
+}
+figure{
+    margin: 0;
+}
 .sp_none{
         display: none;
     }
@@ -46,20 +65,12 @@ header{
     position: absolute;
     top: 0;
     left: 0;
+    overflow: hidden;
 }
-
-
-/*
-.header_inner::after{
-    content: '';
-    display: block;
-    padding-top: 20.42%;
-}
-*/
 
 .header_inner h1{
     color: white;
-    font-size: 1vw;
+    font-size: 2.1vw;
     width: 50%;
     margin: 0;
     padding: 1% 0 0 1%;
@@ -78,10 +89,10 @@ header{
 }
 
 .reservation_btn{
-    width: 29%;
+    width: 28%;
     position: fixed;
     top: 0;
-    right: 29%;
+    right: 28%;
     z-index: 2;
 }
 
@@ -89,7 +100,7 @@ header{
     width: 100%;
 }
 .tell_btn{
-    width: 29%;
+    width: 28%;
     position: fixed;
     top: 0;
     right: 0;
@@ -100,7 +111,6 @@ header{
     width: 100%;
 }
 
-/* PC用の設定 */
 @media screen and (min-width: 768px) {
     header{
         width: 100%;
@@ -111,7 +121,7 @@ header{
 
     .header_inner{
         background: url(../images/img_headerNav-bg1-min.jpg) 0 0 no-repeat;
-        background-size: 100%;
+        background-size: 102%;
     }
     
     .header_logo{
@@ -159,16 +169,6 @@ header{
     position: relative;
 }
 
-/*
-.section01 .right_box{
-    background:url(../images/sp_img_sec01-bg1-min.png)0 0 no-repeat;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: top;
-    position: relative;
-}
-*/
-
 .section01 .right_box{
     width: 100%;
     height: auto;
@@ -191,22 +191,18 @@ header{
     position: absolute;
     right: 9%;
     bottom: 5%;
-/*
-    top: 0;
-    left: 0;
-    right: 0;
-    margin: 2% 0 0 70%;
-*/
 }
 
-
 .section01 .txt01{
-    padding: 18% 0 2% 8%;
+    padding: 18% 0 2% 11%;
     -ms-writing-mode: tb-rl;
+    -webkit-writing-mode: vertical-rl;
+    -o-writing-mode: vertical-rl;
     writing-mode: vertical-rl;
     text-orientation: upright;
     -webkit-text-orientation: upright;
-    font-size: 3.6vw;
+    font-size: 4vw;
+    line-height: 160%;
 }
 
 .section01 .left_box{
@@ -217,7 +213,6 @@ header{
     width: 100%;
 }
 
-/* PC用の設定 */
 @media screen and (min-width: 768px) {
     .section01_inner{
         display: flex;
@@ -228,6 +223,7 @@ header{
     
     .section01 .left_box{
         width: 0;
+        display: none;
     }
     
     .section01 .right_box{
@@ -248,9 +244,9 @@ header{
     .section01 .txt01{
         position: absolute;
         padding: 0;
-        right: 15%;
-        top: 18%;
-        font-size: 2vw;
+        right: 17%;
+        top: 19%;
+        font-size: 1.95vw;
     }
 }
 
@@ -327,7 +323,6 @@ header{
     right: 10%;
 }
 
-/* PC用の設定 */
 @media screen and (min-width: 768px) {
     .section02_inner{
         display: flex;
@@ -371,13 +366,12 @@ header{
     }
 }
 
-
 /***************************/
 /* section04
 ************************************/
 .section04{
   position: relative;
-  margin: -10% auto 0;
+  margin: -10.01% auto 0;
   padding: 10% 0 0;
 }
 
@@ -431,7 +425,7 @@ header{
 .section04 .img05{
     width: 100%;
     position: relative;
-    padding: 50% 0 0;
+    padding: 45% 0 0;
 }
 
 .section04 .img06{
@@ -461,6 +455,9 @@ margin-left: 8%
     font-size: 3.3vw;
     text-align: justify;
     text-justify: inter-ideograph;
+    padding: 1em 0 1.5em;
+    line-height: 170%;
+    z-index: 1;
 }
 
 .section04 .img10{
@@ -471,6 +468,8 @@ margin-left: 8%
 .section04 .img11{
     width: 88%;
     margin: 0 0 0 7%;
+    position: relative;
+    z-index: 1;
 }
 
 .section04 .txt02{
@@ -480,10 +479,24 @@ margin-left: 8%
     font-size: 3.2vw;
     text-align: justify;
     text-justify: inter-ideograph;
-    padding-bottom: 1%;
+    padding: 1em 0 1.5em;
+    line-height: 170%;
 }
 
-/* PC用の設定 */
+.section04 .img12{
+    width: 44%;
+    position: absolute;
+    top: 62.5%;
+    right: 2%;
+}
+
+.section04 .img13{
+    width: 41%;
+    position: absolute;
+    top: 83.5%;
+    right: 0%;
+}
+
 @media screen and (min-width: 768px) {
     .section04{
         
@@ -494,7 +507,7 @@ margin-left: 8%
         background-size: 100%;
         background-position: top;
         position: relative;
-        padding-bottom: 5%;
+        padding-bottom: 4%;
     }
     
     .section04 .img01{
@@ -579,18 +592,20 @@ margin-left: 8%
         text-align: left;
         text-justify: none;
         line-height: 200%;
+        padding: 0;
     }
     
     .section04 .img012{
         width: 38%;
         position: absolute;
         right: 0;
+        padding-top: 2%
     }
     
     .section04 .img10{
         width: 21%;
         position: relative;
-        margin:  6% 0 1% 8%;
+        margin:  7% 0 1% 8%;
     }
 
     .section04 .img11{
@@ -607,8 +622,25 @@ margin-left: 8%
         font-size: 1.5vw;
         text-align: left;
         text-justify: none;
+        padding: 0.5em 0;
+        line-height: 200%;
+    }
+    
+    .section04 .img12{
+        width: 20%;
+        position: absolute;
+        top: 55%;
+        right: 2%;
+    }
+
+    .section04 .img13{
+        width: 35%;
+        position: absolute;
+        top: 72%;
+        right: 60%;
     }
 }
+
 /***************************/
 /* section05
 ************************************/
@@ -637,10 +669,11 @@ margin-left: 8%
 .section05 .txt01{
     color: #fff;
     width: 85%;
-    margin: 0 auto 5%;
+    margin: 0 auto 3%;
     text-shadow:2px 2px 11px #000000,6px 6px 11px #000000,3px 3px 10px #000000;
     font-size: 3.25vw;
-    line-height: 170%
+    line-height: 180%;
+    padding: 1em 0 0;
 }
 
 .section05 .img02{
@@ -671,6 +704,7 @@ margin-left: 8%
         font-size: 1.4vw;
         line-height: 200%;
         text-align: center;
+        padding:0;
     }
     
     .section05 .txt01 p{
@@ -862,7 +896,7 @@ footer .img01{
 
 footer .txt01{
     color: #fff;
-    width: 85%;
+    width: 81%;
     margin: 0 auto 0;
     text-shadow:1px 1px 20px #000000,1px 1px 20px #000000,1px 1px 0px #000000;
     font-size: 4.6vw;
@@ -875,7 +909,7 @@ footer .txt01 p, footer .txt02 p{
 
 footer .txt02{
     color: #fff;
-    width: 85%;
+    width: 81%;
     margin: 0 auto 5%;
     text-shadow:1px 1px 1px #000000,1px 1px 1px #000000,1px 1px 1px #000000;
     font-size: 2.4vw;
@@ -891,7 +925,7 @@ footer .txt03{
     line-height: 170%
 }
 
-.txt_size01{
+footer .txt_size01{
     font-size: 3vw;
 }
 
@@ -908,4 +942,189 @@ footer .img03{
 
 footer .img04{
     width: 38%;
+}
+
+#footer .footer_inner .mapArea iframe {
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#footer .footer_inner .mapArea{
+    width: 82%;
+    margin: 5% auto 8%;
+}
+
+.footer_inner .mapArea {
+    padding: 55% 0 0 0;
+    position: relative;
+}
+
+footer .img05{
+    width: 38%;
+    margin-left: 9%;
+}
+
+footer .txt04{
+    color: #fff;
+    width: 55%;
+    margin: 0;
+    text-shadow:1px 1px 10px #000000,1px 1px 10px #000000,1px 1px 10px #000000;
+    font-size: 3.4vw;
+    line-height: 170%;
+    position: absolute;
+    bottom: 4%;
+    right: 1%;
+}
+
+footer .txt04 p{
+    margin: 0;
+    font-weight: bold;
+}
+
+footer .mgl{
+    margin-left: 10%;
+}
+
+#copyright{
+    position: absolute;
+    bottom: 1%;
+text-shadow:0px 0px 1px #000000,0px 0px 1px #000000;
+    width: 100%;
+    text-align: center;
+    font-size: 2.6vw;
+}
+
+@media screen and (min-width: 768px) {
+    footer{
+        padding: 66.70% 0 0 0;
+    }
+
+    .footer_inner{
+        background: url(../images/img_footer-bg1-min.jpg) 0 0 no-repeat;
+        background-size: cover;
+    }
+    
+    footer .img01{
+    width: 15%;
+    margin: 1.5% auto 1%;
+}
+
+    footer .txt01{
+        color: #fff;
+        width: 30%;
+        margin: 0 0 0 17%;
+        font-size: 2vw;
+    }
+
+    footer .txt02{
+        color: #fff;
+        width: 80%;
+        margin: 0 0 0 17%;
+        text-shadow:1px 1px 1px #000000,1px 1px 1px #000000,1px 1px 1px #000000;
+        font-size: 1vw;
+        font-weight: bold;
+    }
+
+    footer .txt03{
+        color: #fff;
+        width: 50%;
+        margin: 0.5% 0 0 17%;
+        text-shadow:1px 1px 10px #000000,1px 1px 10px #000000,1px 1px 10px #000000;
+        font-size: 1.6vw;
+        line-height: 170%
+    }
+    
+    footer .txt03 p{
+        margin: 0;
+    }
+
+    footer .txt_size01{
+        font-size:1.5vw;
+    }
+
+    footer .flex_inner01{
+        display: inline;
+        display: -webkit-inline;
+        justify-content: center;
+        position: absolute;
+        top: 16%;
+        right: 17%;
+        width: 22%;
+    }
+
+    footer .img03{
+        width: 100%;
+        margin: 0 0 10% 0;
+    }
+
+    footer .img04{
+        width: 100%;
+    }
+
+    #footer .footer_inner .mapArea iframe {
+        width: 100%;
+        height: 100%;
+        margin: auto;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    #footer .footer_inner .mapArea{
+        width: 40%;
+        margin: 1% 0 0 17%;
+    }
+
+    .footer_inner .mapArea {
+        padding: 25% 0 0 0;
+        position: absolute;
+    }
+
+    footer .img05{
+        width: 23%;
+        margin-left: 60%;
+        margin-top: 1%
+    }
+
+    footer .txt04{
+        color: #fff;
+        width: 82%;
+        margin: 2% 0 5% 18%;
+        text-shadow:1px 1px 10px #000000,1px 1px 10px #000000,1px 1px 10px #000000;
+        font-size: 1.35vw;
+        line-height: 170%;
+        position: relative;
+        bottom: 1%;
+        right: 4%;
+    }
+    
+    footer .txt04 li{
+        float: left;
+        display: inline-block;
+        width: max-content;
+    }
+
+    footer .txt04 p{
+        margin: 0;
+        font-weight: bold;
+    }
+
+    footer .mgl{
+        margin-left: 0;
+    }
+
+    #copyright{
+        position: absolute;
+        bottom: 1%;
+        font-weight: normal;
+        text-shadow:0px 0px 1px #000000,0px 0px 1px #000000;
+        margin: 0 auto;
+        width: 100%;
+        text-align: center;
+        font-size: 1.4vw;
+    }
 }
